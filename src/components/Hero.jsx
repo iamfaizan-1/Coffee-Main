@@ -42,7 +42,7 @@ function Hero() {
             Every cup is made with passion and carefully selected beans.
           </p>
 
-          <button className="bg-btn text-white font-semibold px-6 py-3 rounded-lg">
+          <button className="bg-btn  text-white uppercase buttonStyle  ">
             Explore Coffee
           </button>
 

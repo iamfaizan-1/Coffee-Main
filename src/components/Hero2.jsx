@@ -16,7 +16,7 @@ const Hero2 = () => {
                     </h1>
                     <p className="mb-8 leading-relaxed text-para2">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
                     <div className="flex justify-center">
-                        <button className="inline-flex text-white bg-btn border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">ORDER NOW</button>
+                        <button className="inline-flex buttonStyle bg-btn text-white">ORDER NOW</button>
                        
                     </div>
                 </div>
