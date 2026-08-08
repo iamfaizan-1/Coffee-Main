@@ -28,7 +28,7 @@ function Hero() {
           </h1>
 
           <h2 className="heading2 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
-            <span className="bg-text to-white bg-clip-text text-transparent">
+            <span className="bg-heading to-white bg-clip-text text-transparent">
               Coffee
             </span>
           </h2>

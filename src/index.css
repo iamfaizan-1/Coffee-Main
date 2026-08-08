@@ -7,7 +7,9 @@
     --color-secondary:#1C1410;
     --color-hero:#2B1B14;
 --color-btn:#8B5E3C;
---color-text:#FAF7F2;
+--color-para:#CBB8A3;
+--color-para2:#777777;
+--color-heading:#F5EBDD;
 
     --breakpoint-sm: 576px;
 --breakpoint-md:768px;
@@ -18,5 +20,33 @@
 @utility section-padding{
 
 @apply px-6 md:px-15 py-7
+
+}
+
+
+@utility container-padding{
+
+@apply sm:px-20 px-7 md:px-15 py-20
+
+}
+
+
+
+@utility headingSize{
+
+@apply md:text-[35px] sm:text-[30px] text-[25px] 
+
+}
+
+@utility smallHeading{
+
+@apply md:text-[20px]  text-[18px] 
+
+}
+
+
+@utility paraSize{
+
+@apply md:text-[16px] sm:text-[15px] text-[14px] 
 
 }
