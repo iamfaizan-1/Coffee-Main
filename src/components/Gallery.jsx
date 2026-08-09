@@ -2,7 +2,7 @@ import React from 'react'
 
 const Gallery = () => {
   return (
-    <section className="flex lg:flex-row flex-col gap-5 section-padding">
+    <section className="flex lg:flex-row flex-col gap-5 container-padding">
 
 <div className="lg:w-[40%] w-[100%] flex flex-col gap-5">
     <img src="https://images.unsplash.com/photo-1643045430990-fe81ba737677?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDQ3fHx8ZW58MHx8fHx8" className="w-full" alt="" />
