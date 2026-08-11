@@ -1,12 +1,102 @@
-import React, { useLayoutEffect, useState } from 'react'
-import logo from "../assets/coffee-final.png"
+import React, { useRef, useState } from 'react'
+import mylogo from "../assets/coffee-final.png"
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { useEffect } from "react";
-
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import SplitType from "split-type";
 
 function Navbar() {
 
 
+const logo  = useRef(null)
+
+const nav = useRef(null)
+
+useGSAP(()=>{
+const lists = gsap.utils.toArray(".reveal")
+
+const t1 = gsap.timeline()
+t1.from(logo.current,{
+  opacity:0,
+  duration:1,
+
+})
+
+
+t1.from(lists,{
+  y:10,
+  opacity:0,
+  stagger:0.3,
+  ease:"back.out",
+  duration:1.5
+})
+
+})
+
+
+// useGSAP(
+//   () => {
+//     const lists = gsap.utils.toArray(".reveal");
+//     const splits = [];
+
+//     const tl = gsap.timeline();
+
+//     lists.forEach((list) => {
+//       const split = new SplitType(list, {
+//         types: "chars",
+//       });
+
+//       // Store SplitType instance for cleanup
+//       splits.push(split);
+
+//       // Initial state
+//       gsap.set(split.chars, {
+//         yPercent: 100,
+//         opacity: 0,
+//         clipPath: "inset(100% 0% 0% 0%)",
+//         display: "inline-block",
+//       });
+
+//       // Animate characters
+//       tl.to(
+//         split.chars,
+//         {
+//           yPercent: 0,
+//           opacity: 1,
+//           clipPath: "inset(0% 0% 0% 0%)",
+//           stagger: 0.02,
+//           duration: 0.5,
+//           ease: "back.out",
+          
+//         },
+//         ">"
+//       );
+//     });
+
+//     // Logo animation
+//     tl.from(
+//       logo.current,
+//       {
+//         opacity: 0,
+//         duration: 2,
+//       },
+//       0
+//     );
+
+//     // Cleanup
+//     return () => {
+//       splits.forEach((split) => {
+//         split.revert();
+//       });
+//     };
+//   },
+//   {
+//     scope: container,
+//   }
+// );
+
+  
  const[isOpen,setIsOpen] = useState(false)
 
 
@@ -44,21 +134,21 @@ useEffect(() => {
 
 
 
-<nav className=" bg-secondary text-white md:px-15 px-6 flex items-center justify-between">
+<nav ref={nav} className=" bg-secondary text-white md:px-15 px-6 flex items-center justify-between">
 
 {/* logo */}
-  <div className="flex justify-center items-center ">
-<img src={logo} className="w-30"  alt="" />
+  <div ref={logo} className="flex justify-center items-center ">
+<img src={mylogo} className="w-30"  alt="" />
 Coffee
   </div>
 
   {/*Dekstop list */}
 
 <ul className="md:flex hidden gap-5 text-[14px]">
-  <li className="hover:scale-[1.05] transition-transform ease-in-out duration-300">Home</li>
-  <li className="hover:scale-[1.05] transition-transform ease-in-out duration-300" >Features</li>
-  <li className="hover:scale-[1.05] transition-transform ease-in-out duration-300" >Products</li>
-  <li className="hover:scale-[1.05] transition-transform ease-in-out duration-300" >Clients</li>
+ <li className="reveal">Home</li>
+    <li className="reveal">Features</li>
+    <li className="reveal">Products</li>
+    <li className="reveal">Clients</li>
 </ul>
 
 {/* button */}

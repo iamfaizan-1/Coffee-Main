@@ -7,6 +7,13 @@ import Gallery from './components/Gallery'
 import Blog from './components/Blog'
 import Rating from './components/Rating'
 import Footer from './components/Footer'
+import { gsap } from "gsap";
+    
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+
 
 const App = () => {
   return (
