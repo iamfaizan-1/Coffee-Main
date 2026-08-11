@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 @import "tailwindcss";
 
@@ -14,13 +15,17 @@
     --breakpoint-sm: 576px;
 --breakpoint-md:768px;
 --breakpoint-lg:1028px;
---font-family-primary:'Pacifico',cursive;
+--font-primary:'Josefin Sans',cursive;
 }
 
 @utility section-padding{
 
 @apply px-6 md:px-15 py-7
 
+}
+
+body {
+  font-family: var(--font-primary);
 }
 
 
@@ -54,7 +59,7 @@
 
 @utility buttonStyle{
 
-    @apply md:px-[20px] px-[17px] py-[8px] md:text-[15px]  text-[13px]  md:py-[10px] rounded-none font-semibold hover:scale-[1.05] transition-transform ease-in-out duration-300
+    @apply md:px-[20px] px-[17px] py-[8px] md:text-[13px]  text-[12px]  md:py-[10px] rounded-none font-semibold hover:scale-[1.05] transition-transform ease-in-out duration-300
 }
 
 @utility buttonStyle2{

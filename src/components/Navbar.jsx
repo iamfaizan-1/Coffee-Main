@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useState } from 'react'
-
+import logo from "../assets/coffee-final.png"
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import { useEffect } from "react";
 
@@ -44,11 +44,12 @@ useEffect(() => {
 
 
 
-<nav className="py-7 bg-secondary text-white md:px-15 px-6 flex items-center justify-between">
+<nav className=" bg-secondary text-white md:px-15 px-6 flex items-center justify-between">
 
 {/* logo */}
-  <div>
-  Logo
+  <div className="flex justify-center items-center ">
+<img src={logo} className="w-30"  alt="" />
+Coffee
   </div>
 
   {/*Dekstop list */}

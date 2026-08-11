@@ -6,6 +6,7 @@ import Serve from './components/Serve'
 import Gallery from './components/Gallery'
 import Blog from './components/Blog'
 import Rating from './components/Rating'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -41,6 +42,8 @@ const App = () => {
 <div>
   <Blog/>
 </div>
+
+<Footer/>
 
     </div>
   )
