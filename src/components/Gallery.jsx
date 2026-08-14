@@ -110,7 +110,7 @@ const Gallery = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="flex lg:flex-row flex-col gap-5 container-padding overflow-hidden">
+    <section ref={sectionRef} id="gallery" className="flex lg:flex-row flex-col gap-5 container-padding overflow-hidden">
 
       <div ref={leftRef} className="lg:w-[40%] w-[100%] flex flex-col gap-5 pb-5 will-change-transform">
         <img

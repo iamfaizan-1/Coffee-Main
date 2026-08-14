@@ -80,10 +80,16 @@ function Navbar() {
     return () => {
       document.body.style.overflow = "auto";
     };
+
   }, [isOpen]);
 
+const handleNavClick = () => {
+  setIsOpen(false);
+};
+
+
   return (
-    <div ref={container}>
+    <div ref={container} id="navbar" >
 
       <nav ref={nav} className=" bg-secondary text-white md:px-15 px-6 flex items-center justify-between">
 
@@ -95,10 +101,10 @@ function Navbar() {
 
         {/* Desktop list */}
         <ul className="md:flex hidden gap-5 text-[14px]">
-          <li className="reveal">Home</li>
-          <li className="reveal">Features</li>
-          <li className="reveal">Products</li>
-          <li className="reveal">Clients</li>
+          <a href="#navbar" className="reveal">Home</a>
+          <a href="#blogs" className="reveal">Blogs</a>
+          <a href="#gallery" className="reveal">Gallery</a>
+          <a href="#rating" className="reveal">Ratings</a>
         </ul>
 
         {/* button */}
@@ -112,12 +118,12 @@ function Navbar() {
 
       <ul
         ref={mobileListRef}
-        className={`md:hidden absolute text-white top-[48px]  h-90 gap-5 transition-all duration-1000 ease-in-out left-0 w-full z-40 flex flex-col items-center justify-center  overflow-hidden bg-black ${isOpen ? "max-h-90 py-3 " : "max-h-0  py-0"} `}
+        className={`md:hidden absolute text-white top-[80px]  h-90 gap-5 transition-all duration-1000 ease-in-out left-0 w-full z-40 flex flex-col items-center justify-center  overflow-hidden bg-secondary ${isOpen ? "max-h-90 py-3 " : "max-h-0  py-0"} `}
       >
-        <li>Home</li>
-        <li>Features</li>
-        <li>Products</li>
-        <li>Clients</li>
+        <a href="#navbar"    onClick={handleNavClick} >Home</a>
+          <a href="#blogs"   onClick={handleNavClick} >Blogs</a>
+          <a href="#gallery" onClick={handleNavClick} >Gallery</a>
+          <a href="#rating"  onClick={handleNavClick} >Ratings</a>
       </ul>
 
     </div>

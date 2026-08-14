@@ -51,7 +51,7 @@ const Blog = () => {
     }, []);
 
     return (
-        <section ref={sectionRef} className=" body-font flex justify-center container-padding w-full ">
+        <section id="blogs" ref={sectionRef} className=" body-font flex justify-center container-padding w-full ">
             <div className="container w-full  ">
 
                 <div ref={headingRef} className="text-center pb-20">

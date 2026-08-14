@@ -51,7 +51,7 @@ const Rating = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-primary text-white container-padding">
+    <section ref={sectionRef} id="rating" className="bg-primary  text-white container-padding">
 
       <div ref={headingRef} className="text-center pb-20">
         <h1 className="headingSize font-semibold mb-2">What kind of Coffee we serve for you</h1>
